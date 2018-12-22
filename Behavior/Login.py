@@ -23,16 +23,16 @@ class Login(unittest.TestCase,Login_Logout_Element):
 			#清空用户名输入框
 			driver.find_element(*self.username_loc).clear()
 			#输入用户名
-			driver.find_element(*self.username_loc).send_keys("admin")
+			driver.find_element(*self.username_loc).send_keys("sysadmin")
 			#清空密码输入框
 			driver.find_element(*self.password_loc).clear()
 			#输入密码
-			driver.find_element(*self.password_loc).send_keys("Tjd123456")
+			driver.find_element(*self.password_loc).send_keys("tingjiandan")
 			#点击登录按钮
 			driver.find_element(*self.submit_loc).click()
 			sleep(5)
 			#判断是否登录成功
-			if driver.title=="停车场智能管理平台":
+			if driver.title=="停简单管理系统-停简单管理平台":
 				Log().info("登录成功！")
 
 			else:
